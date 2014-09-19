@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html data-ng-app='taskManagerApp'>
+<head>
+	<meta charset="UTF-8">
+	<title>Task Manager</title>
+	<style>
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.js"></script>
+	<script>
+		var taskManagerApp=angular.module("taskManagerApp",[]);
+
+		taskManagerApp.controller('nameCtrl',function ($scope) {
+			$scope.Tasks={
+				personal:[],
+				recreational:[]
+				official:[]
+			};
+			$scope.add=function(){
+				$scope.Tasks.push($scope.textTask);
+
+			}
+
+			
+			// $scope.textTask=""
+		});
+	</script>
+</head>
+<body data-ng-controller='nameCtrl'>
+	<h1>Task Manager</h1>
+	Task:<input type="text" data-ng-model="textTask">
+	<select>
+		<option>Personal</option>
+		<option>Recreational</option>
+		<option>official</option>
+	</select>
+	<input type="button" value="Add" data-ng-click="add()">
+	<input type="button" value="RemoveCompleted" data-ng-click="removeCompleted()">
+
+	<ul>
+		<li data-ng-repeat="task in Tasks track by $index">
+			{{task}}
+		</li>
+	<ul>
+</body>
+</html>
