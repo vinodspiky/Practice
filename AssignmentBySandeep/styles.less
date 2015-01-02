@@ -1,0 +1,174 @@
+a {
+    text-decoration: none !important;
+}
+
+.module{
+	position: relative;
+	
+	.module__image{
+		width:70%;
+		height: 560px;
+		background: url(nature.jpg) repeat;
+		background-image: contain;
+		float: left;
+		.module__image__hoverview{
+			width: 100%;
+			height: 560px;
+			color: white;
+			background-color:#000000;
+			z-index: 1050;
+			display: none;
+			.module__image__hoverview__wrap-header{
+				color:#fff;
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+				font-size: 2.1em;
+			}
+			.module__image__hoverview__date{
+				color:#fff;
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+			}
+			.module__image__hoverview__wrap-text{
+				color: #fff;
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+				font-size: 1.5em;
+			}
+			.module__image__hoverview__link{
+				color: #00BFFF;
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+				font-size: 1.1em;
+			}
+
+
+		}
+		&:hover{
+		.module__image__hoverview{
+			display: block;
+			opacity: 1;
+		}
+		.module__image__text{
+				display: none;
+			}
+	}
+		.module__image__text{
+			width:70%;
+			background-color: #000000;
+			color: #fff;
+			opacity: .8;
+			filter: alpha(opacity=80);
+			text-decoration: none;
+			position: absolute;
+			margin-top:481px;
+			.module__image__text__header{
+				color: #00BFFF;
+				margin: 0 25px 0 10px;
+				padding:10px 0 0 0;
+			}
+			.module__image__text__description{
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+				font-size: 1.2em;
+			}
+		}
+	}
+
+	.module__sidebar{
+		width: 30%;
+		float: right;
+		.module__sidebar__top{
+			height: 280px;
+			.module__sidebar__top__date{
+				color: #fff;
+				margin: 0 25px 0 10px;
+				padding:10px 0 0 0;
+			}
+			.module__sidebar__top__wrap-header{
+				margin: 0 25px 0 10px;
+				padding:10px 0 0 0;
+			}
+			.module__sidebar__top__wrap-text{
+				margin: 0 25px 0 10px;
+				padding:10px 0 0 0;
+				font-size: 1.1em;
+			}
+			.module__sidebar__top__link{
+				text-transform: uppercase;
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+				color: #00BFFF;
+				text-decoration: none;
+			}
+			background: #7abcff; /* Old browsers */
+			background: -webkit-linear-gradient(left, #7abcff 0%, #60abf8 43%, #4096ee 68%);
+			background: -o-linear-gradient(left, #7abcff 0%, #60abf8 43%, #4096ee 68%);
+			background: linear-gradient(to right, #7abcff 0%, #60abf8 43%, #4096ee 68%); /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */}
+		.module__sidebar__bottom{
+			height: 280px;
+			.module__sidebar__bottom__date{
+				color: #fff;
+				margin: 0 25px 0 10px;
+				padding:10px 0 0 0;
+			}
+			.module__sidebar__bottom__wrap-header{
+				margin: 0 25px 0 10px;
+				padding:10px 0 0 0;
+			}
+			.module__sidebar__bottom__wrap-text{
+				margin: 0 25px 0 10px;
+				padding:10px 0 0 0;
+				font-size: 1.1em;
+			}
+			.module__sidebar__bottom__link{
+				text-transform: uppercase;
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+				color: #00BFFF;
+				text-decoration: none;
+			}
+			background: #d0e4f7; /* Old browsers */
+			background: -moz-linear-gradient(left, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d0e4f7), color-stop(24%,#73b1e7), color-stop(50%,#0a77d5), color-stop(79%,#539fe1), color-stop(100%,#87bcea)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(left, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(left, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%); /* Opera 11.10+ */
+
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	
+	.module{
+		.module__image{
+			clear: both;
+			width: 100%;
+			
+			.module__image__text{
+				width: 100%;
+			}
+		}
+		.module__sidebar{
+				clear: both;
+				display: block;
+				width: 100%;
+			
+			display: inline-block;
+			.module__sidebar__top{
+				width: 50%;
+			
+			float: left;
+			}
+		.module__sidebar__bottom{
+			width: 50%;
+			float: right;
+			}
+
+		}
+		
+	}
+}
+
+
+
