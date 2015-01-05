@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> jQuery(function($){ // Pass jQuery a function.
+// Pass jQuery a string of HTML.
+$('<p></p>').appendTo('body');
+// Pass jQuery an element reference.
+$(document.createElement('a')).text('jQuery').appendTo('p');
+// Pass jQuery a CSS expression.
+$('a:first').attr('href', 'http://www.jquery.com');
+// Pass jQuery a DOM reference.
+$(document.anchors[0]).attr('jQuery');
+}); </script>
+</body>
+</html>
+
+
+
+<!-- Select elements from the DOM using CSS expressions and custom jQuery expressions,
+as well as selecting elements using DOM references: jQuery('p > a') or
+jQuery(':first') and jQuery(document.body)
+ Create HTML on the fly by passing HTML string structures or DOM methods that create
+DOM elements: jQuery('<div id="nav"></div>') or
+jQuery(document.createElement('div')
+ A shortcut for the ready() event by passing a function to the jQuery function:
+jQuery(function($){ /* Shortcut for ready() */ })
+Each of these usages is detailed in the code example Above. -->

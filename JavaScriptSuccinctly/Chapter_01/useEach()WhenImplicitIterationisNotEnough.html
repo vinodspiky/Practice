@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="div1"></div>
+<div id='div2'></div>
+<div id="div3"></div>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+$('div').text('I am a div');
+// here by using Implicit iteration all dive have the text...'I am a div.'
+
+
+//but its not enough for .attr
+// Alerts attribute value for first element in wrapper set.
+alert($('div').attr('id')); // Alerts "div1".
+//it does not iterate over all the div..so use .each
+
+
+
+$('div').each(function(){
+// "this" is each element in the wrapper set.
+alert($(this).attr('id'));
+// Could also be written: alert(this.id);
+});
+
+})(jQuery);
+</script>
+</body>
+</html>
+
+
+<!-- Notes:
+jQuery also provides a $.each function, not to be confused with the $().each method, which
+is used specifically to iterate over a jQuery wrapper set. The $.each method can actually be
+used to iterate over any old JavaScript array or object. It is essentailly a substitue for native
+JavaScript loops. -->

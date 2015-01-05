@@ -1,0 +1,27 @@
+<!-- jQuery can be used to create new
+DOM elements and then do something with these elements. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <body>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            jQuery('<a>jQuery_Link</a>').attr('href', 'http://www.jquery.com').appendTo('body');
+
+            jQuery('<li>Hi this is New list Element</li>').appendTo('body');
+            $('<li>Hi this is another New list Element</li>').appendTo('body');
+            // focus on '' inside jQuery()..to create new dom element.
+        </script>
+    </body>
+
+</html>
+
+
+
+<!--  Quirks mode refers to a technique used by some web browsers for the sake of maintaining backward compatibility with web pages designed for older browsers -->
+
+
+<!-- Remarks:-jQuery methods not working correctly when a browser renders an
+HTML page in quirks mode. Make sure when you are using jQuery that the browser interprets
+the HTML in standards mode or almost standards mode by using a valid doctype -->

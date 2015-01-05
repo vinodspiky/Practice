@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<a>jQuery.com</a><br>
+<a>Lol.com</a>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+// Using DOM node properties to set the title attribute.
+$('a').get(0).title = 'jQuery.com';
+
+
+// remark this can be used also like this..
+// $('a')[0].title = 'jQuery.com';
+// i.e. you can avoid using get().
+
+// this method is also faster becuse it uses native jscript to retreive the element from array.
+
+// Manipulation of DOM element using jQuery methods.
+$('a').attr('href', 'http://www.jquery.com');
+
+
+$('a').get(1).title = 'Lol.com';
+// Manipulation of DOM element using jQuery methods.
+$('a').attr('href', 'http://www.google.com');
+})(jQuery);
+</script>
+</body>
+</html>
+
+
+<!-- jQuery provides the handy get() method for accessing DOM elements at a
+specific index in the wrapper set. -->
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <a></a>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script> (function ($) {
+     $('a').text('jQuery') // Sets text to jQuery and then returns $('a')     
+      .attr('href', 'http://www.jquery.com/') // Sets the href attribute and then returns $('a')     
+      .addClass('jQuery'); // Sets class and then returns $('a') 
+ })(jQuery) </script>
+</body>
+</html>
+
+
+<!-- Once you have selected something using the jQuery function and created a wrapper set -->
+
+<!-- Conceptually,
+jQuery methods continue the chain by always returning the jQuery wrapper set, which can then
+be used by the next jQuery method in the chain. -->
+
+
+<!-- Most jQuery methods are chainable, but
+not all. -->
+
+
+<!--In the above code,
+the text(), attr(), and addClass() methods are being chained. -->
