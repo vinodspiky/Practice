@@ -140,6 +140,8 @@ a {
   color: #00BFFF;
   text-decoration: none;
 }
+
+
 @media screen and (max-width: 800px) {
   .module .module__image {
     clear: both;

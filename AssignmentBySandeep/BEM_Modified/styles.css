@@ -1,0 +1,167 @@
+a {
+  text-decoration: none !important;
+}
+.module {
+  position: relative;
+}
+.module .primary {
+  width: 70%;
+  height: 560px;
+  background: url(nature.jpg) repeat;
+  background-image: contain;
+  float: left;
+}
+.module .primary .hoverView {
+  width: 100%;
+  height: 560px;
+  color: white;
+  background-color: #000000;
+  z-index: 1050;
+  display: none;
+}
+.module .primary .hoverView .hoverView__wrapHeader {
+  color: #fff;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+  font-size: 2.1em;
+}
+.module .primary .hoverView .hoverView__date {
+  color: #fff;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+}
+.module .primary .hoverView .hoverView__wrapText {
+  color: #fff;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+  font-size: 1.5em;
+}
+.module .primary .hoverView .hoverView__link {
+  color: #00BFFF;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+  font-size: 1.1em;
+}
+.module .primary:hover .hoverView {
+  display: block;
+  opacity: 1;
+}
+.module .primary:hover .normalView {
+  display: none;
+}
+.module .primary .normalView {
+  width: 70%;
+  background-color: #000000;
+  color: #fff;
+  opacity: .8;
+  filter: alpha(opacity=80);
+  text-decoration: none;
+  position: absolute;
+  margin-top: 481px;
+}
+.module .primary .normalView .normalView__header {
+  color: #00BFFF;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 0 0;
+}
+.module .primary .normalView .normalView__description {
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+  font-size: 1.2em;
+}
+.module .secondary {
+  width: 30%;
+  float: right;
+}
+.module .secondary .marketDetails.bm-gradient__leftToRight {
+  height: 280px;
+  background: #7abcff;
+  /* Old browsers */
+  background: -webkit-linear-gradient(left, #7abcff 0%, #60abf8 43%, #4096ee 68%);
+  background: -o-linear-gradient(left, #7abcff 0%, #60abf8 43%, #4096ee 68%);
+  background: linear-gradient(to right, #7abcff 0%, #60abf8 43%, #4096ee 68%);
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+}
+.module .secondary .marketDetails.bm-gradient__leftToRight .marketDetails__date {
+  color: #fff;
+  padding: 10px 0 10px 0;
+  margin: 0 25px 0 10px;
+}
+.module .secondary .marketDetails.bm-gradient__leftToRight .marketDetails__wrapHeader {
+  color: #fff;
+  padding: 10px 0 10px 0;
+  margin: 0 25px 0 10px;
+}
+.module .secondary .marketDetails.bm-gradient__leftToRight .marketDetails__wrapText {
+  color: #fff;
+  padding: 10px 0 10px 0;
+  margin: 0 25px 0 10px;
+  font-size: 1.1em;
+}
+.module .secondary .marketDetails.bm-gradient__leftToRight .marketDetails__link {
+  color: #00BFFF;
+  text-transform: uppercase;
+  padding: 10px 0 10px 0;
+  margin: 0 25px 0 10px;
+}
+.module .marketDetails.bm-gradient__rightToLeft {
+  height: 280px;
+  background: #d0e4f7;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #d0e4f7), color-stop(24%, #73b1e7), color-stop(50%, #0a77d5), color-stop(79%, #539fe1), color-stop(100%, #87bcea));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%);
+  /* Opera 11.10+ */
+}
+.module .marketDetails.bm-gradient__rightToLeft .marketDetails__date {
+  color: #fff;
+  padding: 10px 0 10px 0;
+  margin: 0 25px 0 10px;
+}
+.module .marketDetails.bm-gradient__rightToLeft .marketDetails__wrapHeader {
+  color: #fff;
+  padding: 10px 0 10px 0;
+  margin: 0 25px 0 10px;
+}
+.module .marketDetails.bm-gradient__rightToLeft .marketDetails__wrapText {
+  color: #fff;
+  padding: 10px 0 10px 0;
+  margin: 0 25px 0 10px;
+  font-size: 1.1em;
+}
+.module .marketDetails.bm-gradient__rightToLeft .marketDetails__link {
+  color: #00BFFF;
+  text-transform: uppercase;
+  padding: 10px 0 10px 0;
+  margin: 0 25px 0 10px;
+}
+@media screen and (max-width: 800px) {
+  .module .primary {
+    clear: both;
+    width: 100%;
+  }
+  .module .primary .normalView {
+    width: 100%;
+  }
+  .module .secondary {
+    clear: both;
+    display: block;
+    width: 100%;
+    display: inline-block;
+  }
+  .module .secondary .marketDetails.bm-gradient__leftToRight {
+    width: 50%;
+    float: left;
+  }
+  .module .secondary .marketDetails.bm-gradient__rightToLeft {
+    width: 50%;
+    float: right;
+  }
+}

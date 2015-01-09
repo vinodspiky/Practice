@@ -1,0 +1,71 @@
+<!--  Unlike the static and relative values, an absolutely positioned element is removed from the normal flow.
+
+This means you can put it anywhere, and it won’t affect or be affected by any other element in the flow. 
+
+
+
+
+Just tell it where to stick and it sticks.
+
+
+Exactly like the relative value, absolutely positioned elements respond to offset properties for positioning.
+
+You can set an element to top: 100px and left: 200px; and that element will sit exactly 100px from the top and 200px from the left of the document
+
+ -->
+<!-- REMARKS   
+
+ If you shrink the browser window so that the boxes overlap, you’ll notice that there is no interaction at all—that’s because they’re out of the document’s normal flow.
+
+  -->
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Example E</title>
+	<style>
+		#box_1 { 
+			position: absolute;
+		 	top: 0;
+		 	left: 0;
+		 	width: 200px;
+		 	height: 200px;
+			background: #ee3e64;
+		}
+		#box_2 { 
+			position: absolute;
+		 	top: 0;
+		 	right: 0;
+		 	width: 200px;
+		 	height: 200px;
+			background: #44accf;
+		}
+		#box_3 { 
+			position: absolute;
+		 	bottom: 0;
+		 	left: 0;
+		 	width: 200px;
+		 	height: 200px;
+			background: #b7d84b;
+		}
+		#box_4 { 
+			position: absolute;
+		 	bottom: 0;
+		 	right: 0;
+		 	width: 200px;
+		 	height: 200px;
+			background: #ebde52;
+		}
+	</style>
+</head>
+<body>
+	<div id="box_1"></div>
+	<div id="box_2"></div>
+	<div id="box_3"></div>
+	<div id="box_4"></div>
+</body>
+</html>

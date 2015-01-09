@@ -1,0 +1,175 @@
+a {
+    text-decoration: none !important;
+}
+
+
+.paddings(){
+	padding:10px 0 10px 0;
+}
+
+.margins(){
+	margin: 0 25px 0 10px;
+}
+
+
+.blockStyle(){
+	.marketDetails__date{
+		color: #fff;
+		.paddings();
+		.margins();
+	}
+	.marketDetails__wrapHeader{
+		color: #fff;
+		.paddings();
+		.margins();
+	}
+	.marketDetails__wrapText{
+		color: #fff;
+		.paddings();
+		.margins();
+		font-size: 1.1em;
+	}
+	.marketDetails__link{
+		color: #00BFFF;
+		text-transform: uppercase;
+		.paddings();
+		.margins();
+	}
+}
+
+.module{
+		position: relative;
+		.primary{
+		width:70%;
+		height: 560px;
+		background: url(nature.jpg) repeat;
+		background-image: contain;
+		float: left;
+		.hoverView{
+			width: 100%;
+			height: 560px;
+			color: white;
+			background-color:#000000;
+			z-index: 1050;
+			display: none;
+			.hoverView__wrapHeader{
+				color:#fff;
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+				font-size: 2.1em;
+			}
+			.hoverView__date{
+				color:#fff;
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+			}
+			.hoverView__wrapText{
+				color: #fff;
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+				font-size: 1.5em;
+			}
+			.hoverView__link{
+				color: #00BFFF;
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+				font-size: 1.1em;
+			}
+
+
+		}
+		&:hover{
+		.hoverView{
+			display: block;
+			opacity: 1;
+		}
+		.normalView{
+				display: none;
+			}
+	}
+		.normalView{
+			width:70%;
+			background-color: #000000;
+			color: #fff;
+			opacity: .8;
+			filter: alpha(opacity=80);
+			text-decoration: none;
+			position: absolute;
+			margin-top:481px;
+			.normalView__header{
+				color: #00BFFF;
+				margin: 0 25px 0 10px;
+				padding:10px 0 0 0;
+			}
+			.normalView__description{
+				margin: 0 25px 0 10px;
+				padding:10px 0 10px 0;
+				font-size: 1.2em;
+			}
+		}
+	}
+
+
+
+
+
+	.secondary{
+		width: 30%;
+		float: right;
+
+		.marketDetails.bm-gradient__leftToRight{
+			.blockStyle();
+			height: 280px;
+			background: #7abcff; /* Old browsers */
+			background: -webkit-linear-gradient(left, #7abcff 0%, #60abf8 43%, #4096ee 68%);
+			background: -o-linear-gradient(left, #7abcff 0%, #60abf8 43%, #4096ee 68%);
+			background: linear-gradient(to right, #7abcff 0%, #60abf8 43%, #4096ee 68%); /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */}
+		}
+		.marketDetails.bm-gradient__rightToLeft{
+			.blockStyle();
+			height: 280px;
+			background: #d0e4f7; /* Old browsers */
+			background: -moz-linear-gradient(left, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d0e4f7), color-stop(24%,#73b1e7), color-stop(50%,#0a77d5), color-stop(79%,#539fe1), color-stop(100%,#87bcea)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(left, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(left, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%); /* Opera 11.10+ */
+
+		}
+}
+	
+
+
+@media screen and (max-width: 800px) {
+	
+	.module{
+		.primary{
+			clear: both;
+			width: 100%;
+			
+			.normalView{
+				width: 100%;
+			}
+		}
+		.secondary{
+				clear: both;
+				display: block;
+				width: 100%;
+			
+			display: inline-block;
+			.marketDetails.bm-gradient__leftToRight{
+				width: 50%;
+			
+			float: left;
+			}
+			.marketDetails.bm-gradient__rightToLeft{
+				width: 50%;
+				float: right;
+			}
+
+		}
+		
+	}
+}
+
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.blockRed{
+			float: left;
+		}
+		.blockGreen{
+			float: left;
+		}
+		.blockBlue{
+			float: none;
+		}
+		.blockLightGreen{
+			float: none;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="module">
+		<div class="blockRed" style="width:200px;height:200px;background-color:red"></div>
+		<div class="blockGreen" style="width:200px;height:200px;background-color:green"></div>
+		<div class="blockBlue" style="width:200px;height:200px;background-color:blue"></div>
+		<div class="blockLightGreen" style="width:200px;height:200px;background-color:#b7d84b"></div>
+		
+	</div>
+</body>
+</html>
+
+
+
+<!-- How do you like that blue block? Oh wait, where is it? It’s there, right underneath the red block. The red and blue blocks are both floated and behaving as we would expect, sitting side by side. Since they’re removed from the normal flow however, the blue and orange blocks act as if they’re not even there. That is why our blue block is hidden undereath our red block. So how do we make our blue block show up again? Enter the clear property. -->

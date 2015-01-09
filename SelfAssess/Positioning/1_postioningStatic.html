@@ -1,0 +1,42 @@
+<!-- in CSS, we work within boundaries. In CSS, this boundary is called the normal flow -->
+
+<!-- Boxes in the normal flow belong to a formatting context, which may be block or inline, but not both simultaneously. Block boxes participate in a block formatting context. Inline boxes participate in an inline formatting context. -->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Example A</title>
+	<style>
+
+	/*Note that static is the default position value of an element, should you fail to apply any other value*/
+		#box_1 { 
+			position: static;
+			width: 200px;
+			height: 200px;
+			background: #ee3e64;
+		}
+		#box_2 { 
+			position: static;
+			width: 200px;
+			height: 200px;
+			background: #44accf;
+		}
+		#box_3 { 
+			position: static;
+			width: 200px;
+			height: 200px;
+			background: #b7d84b;
+		}
+	</style>
+</head>
+<body>
+	<div id="box_1" class="box"></div>
+	<div id="box_2" class="box"></div>
+	<div id="box_3" class="box"></div>
+</body>
+</html>
+
+<!-- You can use the static value for simple, single-column layouts where each element must sit on top of the next one. If you want to start shifting those elements around using offset properties such as top, right, bottom, and left, you’re out of luck. These properties are unavailable to a static element. In fact, a static element can’t even create a new coordinate system for child elements. -->
