@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div.container {
+			border: 1px solid #000000;
+			/*We want the black border to go around both our floating columns. That doesn't happen, though. The container div itself has no height, since it only contains floating elements. */
+			overflow: auto;
+			width: 100%;
+			/**/
+		}
+
+		div.left {
+			width: 45%;
+			float: left;
+		}
+
+		div.right {
+			width: 45%;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="left">
+			This is left column.
+			<br>
+			This is left column.
+			<br>
+			This is left column.
+			<br>
+			This is left column.
+			
+		</div>
+		<div class="right">
+			This is right Column.
+			<br>
+			This is right Column.
+			<br>
+			This is right Column.
+			
+		</div>
+	</div>
+</body>
+</html>
