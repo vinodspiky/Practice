@@ -1,0 +1,142 @@
+body {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+a {
+  text-decoration: none !important;
+}
+.module {
+  position: absolute;
+  overflow: hidden;
+}
+.normalView {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  opacity: .8;
+  filter: alpha(opacity=80);
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  min-height: 100px;
+}
+.normalView__header {
+  color: #00BFFF;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 0 0;
+}
+.normalView__description {
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+  font-size: 1.2em;
+}
+.module__secondary {
+  width: 45%;
+  float: right;
+  position: relative;
+}
+.marketDetails {
+  height: 280px;
+  background: #7abcff;
+  /* Old browsers */
+  background: -webkit-linear-gradient(left, #7abcff 0%, #60abf8 43%, #4096ee 68%);
+  background: -o-linear-gradient(left, #7abcff 0%, #60abf8 43%, #4096ee 68%);
+  background: linear-gradient(to right, #7abcff 0%, #60abf8 43%, #4096ee 68%);
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+}
+.marketDetails .marketDetails__date {
+  color: #ffffff;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+}
+.marketDetails .marketDetails__wrapHeader {
+  color: #000000;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+}
+.marketDetails .marketDetails__wrapText {
+  color: #000000;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+  font-size: 1.1em;
+}
+.marketDetails .marketDetails__link {
+  color: #00BFFF;
+  text-transform: uppercase;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+}
+.module__primary {
+  position: absolute;
+  width: 55%;
+  height: 560px;
+  background: url(nature.jpg) no-repeat;
+  float: left;
+}
+.module__primary:hover .hoverView {
+  display: block;
+  opacity: 1;
+}
+.module__primary:hover .normalView {
+  display: none;
+}
+.hoverView {
+  width: 100%;
+  height: 560px;
+  color: white;
+  background-color: #000000;
+  z-index: 10;
+  display: none;
+}
+.hoverView__wrapHeader {
+  color: #ffffff;
+  margin: 0 25px 0 10px;
+  padding: 70px 0 10px 0;
+  font-size: 2.1em;
+}
+.hoverView__wrapHeader {
+  color: #ffffff;
+  margin: 0 25px 0 10px;
+  padding: 70px 0 10px 0;
+  font-size: 2.1em;
+}
+.hoverView__date {
+  color: #ffffff;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+}
+.hoverView__wrapText {
+  color: #ffffff;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+  font-size: 1.5em;
+}
+.hoverView__link {
+  color: #00BFFF;
+  margin: 0 25px 0 10px;
+  padding: 10px 0 10px 0;
+  font-size: 1.1em;
+}
+@media screen and (max-width: 560px) {
+  .module__primary {
+    position: relative;
+    clear: both;
+    width: 100%;
+  }
+  .normalView {
+    width: 100%;
+  }
+  .module__secondary {
+    clear: both;
+    display: block;
+    width: 100%;
+    display: inline-block;
+  }
+  .marketDetails {
+    width: 50%;
+    float: left;
+  }
+}
