@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<p><strong>first</strong></p>
+<p>middle</p>
+<p><strong>last</strong></p>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) { // Alerts middle, by filtering out the first
+// and last <p> elements in the wrapper set.
+alert($('p').filter(':not(:first):not(:last)').text());
+})(jQuery); </script>
+</body>
+</html>
+
+
+<!-- Remarks
+
+Notes:
+When using filter(), always ask yourself if it is absolutely necessary. For example,
+$('p').filter(':not(:first):not(:last)') could be written without filter() by passing
+the jQuery function the expressions as custom selectors $('p:not(:first):not(:last)').
+
+
+
+ The filter() method is used to filter the current set of elements contained within the wrapper
+set.
+
+The find() method, on the other hand, can be used to further find descendants of the currently
+selected elements
+
+-->

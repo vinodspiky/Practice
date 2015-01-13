@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function($){ $('<div><a></a></div>')
+.find('a')
+.text('jQuery')
+.attr('href', 'http://www.jquery.com')
+.end().appendTo('body'); // end() is used to exit the find() method
+})(jQuery); </script>
+</body>
+</html>
+
+<!-- Simple elements that do not contain attributes—e.g. $('<div></div>')—are created via the
+document.createElement DOM method, while all other cases rely on the innerHTML
+property. In fact, you can directly pass the jQuery function an element created with
+document.createElement—e.g. $(document.createElement('div')).
+The HTML string passed to jQuery cannot contain elements that might be considered invalid
+inside of a <div> element.
+The HTML string passed to the jQuery function must be well formed.
+You should open and close all HTML elements when passing jQuery HTML. Not doing so
+could result in bugs, mostly in Internet Explorer. Just to be safe, always close your HTML
+elements and avoid writing shortcut HTML—e.g. $(<div />). -->
