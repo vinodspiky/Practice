@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="#foo[bar]">jQuery</div>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+// Alerts "jQuery"
+alert($('#\\#foo\\[bar\\]').text());
+})(jQuery);
+</script>
+</body>
+</html>
+
+<!-- It is possible to escape characters
+by placing two backslashes before the character. -->
+
+
+<!-- Here is the complete list of characters that need to be escaped when used as a literal part of a
+name.
+ #
+ ;
+ &
+ ,
+ .
+ +
+ *
+ ~
+ '
+ :
+ "
+ !
+ ^
+ $
+ [
+ ]
+ (
+ )
+ =
+ >
+ |
+ / -->

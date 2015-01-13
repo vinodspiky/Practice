@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="i0">jQuery</div>
+<div id="i1">jQuery</div>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function($){
+// Returns true.
+alert($('div').is('#i1'));
+// Returns false. Wrapper set contains no <div> with id="i2".
+alert($('div').is('#i2'));
+// Returns false. Wrapper set contains no hidden <div>
+alert($('div').is(':hidden'));
+})(jQuery); </script>
+</body>
+</html>
+
+
+<!-- Notes:
+As of jQuery 1.3, the is() method supports all expressions. Previously, complex expressions
+such as those containing hierarchy selectors (such as +, ~, and >) always returned true.
+Filter is used by other internal jQuery functions. Therefore, all rules that apply there, apply
+here, as well.
+Some developers use is('.class') to determine if an element has a specific class. Don't
+forget that jQuery already has a method for doing this called hasClass('class'), which can
+be used on elements that contain more than one class value. But truth be told, hasClass()
+is just a convenient wrapper for the is() method. -->

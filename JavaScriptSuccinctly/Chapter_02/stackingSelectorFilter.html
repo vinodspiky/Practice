@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<a title="jQuery">jQuery.com</a>
+<a href="http://www.jquery.com" title="jQuery" class="foo">jQuery.com 1</a>
+<a href="">jQuery.com</a>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+(function ($) {
+// Alerts "1"
+
+/*the jQuery code below will only select <a> elements in the HTML page
+that:
+ Contain an href attribute with a starting value of "http://"
+ Have a title attribute with a value of "jQuery"*/ 
+
+
+alert($('a[title="jQuery"][href^="http://"]').length);
+})(jQuery);
+</script>
+</body>
+</html>
+
+<!-- // Select the last <div> contained in the
+// wrapper set that contains the text "jQuery".
+$('div:last:contains("jQuery")')
+// Get all check boxes that are both visible and selected.
+$(':checkbox:visible:checked')
+The concept to take away is that selector filters can be stacked and used in combination.
+Notes:
+You can also nest and stack filters—e.g. $('p').filter(':not(:first):not(:last)'). -->
