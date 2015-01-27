@@ -1,0 +1,49 @@
+<!-- Event delegation relies on event propagation (a.k.a. bubbling). When you click an <a> inside of
+a <li>, which is inside of a <ul>, the click event bubbles up the DOM from the <a> to the <li>
+to the <ul> and so on, until each ancestor element with a function assigned to an event handler
+fires.
+This means if we attach a click event to a <ul> and then click an <a> that is encapsulated inside
+of the <ul>, eventually the click handler attached to the <ul>, because of bubbling, will be
+invoked. When it is invoked, we can use the event object (event.target) to identify which
+element in the DOM actually caused the event bubbling to begin. Again, this will give us a
+reference to the element that started the bubbling. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<ul>
+<li><a href="#">remove</a></li>
+<li><a href="#">remove</a></li>
+<li><a href="#">remove</a></li>
+<li><a href="#">remove</a></li>
+<li><a href="#">remove</a></li>
+<li><a href="#">remove</a></li>
+</ul>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+	$('ul').click(function (event) { // Attach click handler to <ul> and pass event object.
+// event.target is the <a>.
+
+
+// $(event.target).parent().remove(); // Remove <li> using parent()
+
+$(event.target).parent('li').remove();
+
+
+return false; // Cancel default browser behavior, stop propagation.
+});
+})(jQuery); </script>
+</body>
+</html>
+
+
+<!-- Now, if you were to literally click on one of the actual bullets of the list and not the link itself,
+guess what? You'll end up removing the <ul>. Why? Because all clicks bubble. So when you
+click on the bullet, the event.target is the <li>, not the <a>. Since this is the case, the
+parent() method will grab the <ul> and remove it. We could update our code so that we only
+remove an <li> when it is being clicked from an <a> by passing the parent() method an
+element expression.
+$(event.target).parent('li').remove(); -->
+
+

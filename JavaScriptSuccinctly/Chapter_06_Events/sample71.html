@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<button>Add another button</button>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+$('button').live('click', function ()
+	{ $(this).after("<button>Add another button</button>"); });
+})(jQuery); </script>
+</body>
+</html>
+
+<!-- After examining the code, it should be obvious that we are using live() to apply event
+delegation to a parent element (<body> element in the code example) so that any button
+element added to the DOM always responds to the click handler.
+
+
+To remove the live event, we simply use the die() method—e.g. $('button').die().
+
+The concept to take away is the live() method could be used to attach events to DOM
+elements that are removed and added using AJAX. In this way, you would forgo having to
+rebind events to new elements introduced into the DOM after the initial page load.
+Notes:
+live() supports the following handlers: click, dblclick, mousedown, mouseup, mousemove,
+mouseover, mouseout, keydown, keypress, keyup.
+live() only works against a selector.
+live() by default will stop propagation by using return false within the function sent to the
+live() method.
+
+
+
+ -->

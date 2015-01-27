@@ -1,0 +1,36 @@
+<!-- By setting its checked attribute to true using
+the attr(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<input name="" value="" type="checkbox" />
+<input name="" value="" type="radio" />
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function($){
+// Set all check boxes or radio buttons to selected.
+$('input:checkbox,input:radio').attr('checked', 'checked');
+})(jQuery); </script>
+</body>
+</html>
+
+<!-- TO clear
+
+.removeAttr('checked');
+
+ -->
+
+
+ <!-- 
+Select/clear multiple radio button or check boxes.
+
+Using val() 
+
+ // Check all radio and check-box inputs on the page.
+$('input:radio,input:checkbox').val(['radio1', 'radio2', 'checkbox1',
+'checkbox2']); 
+
+Remarks:If the check box or radio button is already selected, using val() will not clear the input
+element
+-->

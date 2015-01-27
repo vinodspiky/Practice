@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<input type="button" value="Input Button" />
+<input type="checkbox" />
+<input type="file" />
+<input type="hidden" />
+<input type="image" />
+<input type="password" />
+<input type="radio" />
+<input type="reset" />
+<input type="submit" />
+<input type="text" />
+<select>
+<option>Option</option>
+<!-- <option value="loL"></option> -->
+
+
+<!-- <textarea name="" id="" cols="30" rows="10">hi this is first Div.</textarea> -->
+<!-- If we include this ..textarea increses one value. -->
+</select>
+<textarea>Hi this is Spiky!!!</textarea>
+
+<button>Button</button>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function($){
+// Alerts "13" form elements
+alert($(':input').length);
+})(jQuery); </script>
+</body>
+</html>
+
+<!--  You can select all form elements by using the :input form filter. This filter will select more than
+just input elements, it will select any <textarea>, <select>, or <button> elements as well-->

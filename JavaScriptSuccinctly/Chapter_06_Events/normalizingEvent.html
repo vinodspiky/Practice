@@ -1,0 +1,17 @@
+<!-- 
+jQuery normalizes the event object according to W3C standards. This means that when the
+event object is passed to a function handler, you do not have to worry about browser-specific
+implementations of the event object (e.g. Internet Explorer’s window.event). You can use the
+following attributes and methods of the event object worry-free from browser differences
+because jQuery normalizes the event object. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+$(window).load(function (event) { alert(event.type); }); // Alerts "load".
+})(jQuery); </script>
+</body>
+</html>

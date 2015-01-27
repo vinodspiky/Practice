@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div>HI!! </div>
+<div>Welcome</div>
+<div>to</div>
+<div>Sapient Family</div>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+alert($('div').text()); // Alerts "1,2,3,4"
+})(jQuery); </script>
+</body>
+</html>
+
+<!-- One might incorrectly assume that the text() method only returns the text node of the first
+element in a wrapper set. However, it will actually join the text nodes of all elements contained
+in a wrapper set and then return the concatenated value as a single string -->

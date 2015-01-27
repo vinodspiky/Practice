@@ -14,4 +14,4 @@ function id(x) {
 console.log(id instanceof Function);
 
 // Therefore, functions get their methods from Function.prototype.
-// put console.log(dir(Function.prototype)) to check
+// put console.log(dir(Function.prototype)) to check 

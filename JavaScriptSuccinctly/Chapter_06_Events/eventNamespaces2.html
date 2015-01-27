@@ -1,0 +1,33 @@
+<!-- In addition to unbinding a specific function associated with a single DOM element and handler,
+we can also use event namespacing to exclusively invoke (using trigger()) a specific handler
+and function attached to a DOM element. In the code below, two click events are being added to
+<a>, and then using namespacing, only one is invoked. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<a>click</a>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+$('a').bind('click',
+function () { alert('You clicked me') });
+$('a').bind('click.unique',
+function () { alert('You Trigger click.unique') }); // Invoke the function
+passed to click.unique
+$('a').trigger('click.unique');
+})(jQuery); </script>
+</body>
+</html>
+
+
+<!-- 
+Notes:
+There is no limit to the depth or number of namespaces used—
+e.g. resize.layout.headerFooterContent.
+Namespacing is a great way of protecting, invoking, removing any exclusive handlers that a
+plugin may require.
+Namespacing works with custom events as well as standard events—e.g. click.unique or
+myclick.unique.
+
+ -->
