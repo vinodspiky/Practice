@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="http://www.jquery.com">jQuery</a>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+// Stops browser from navigating.
+$('a').click(function (event) { event.preventDefault(); });
+})(jQuery); </script>
+</body>
+</html>
+
+<!-- 
+For example When a link is clicked or a form is submitted, the browser will invoke its default functionality
+associated with these events
+
+YOu can stop this using PreventDefault() -->
