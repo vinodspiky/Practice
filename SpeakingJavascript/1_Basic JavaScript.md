@@ -5,20 +5,24 @@ ECMAScript is the official name for JavaScript
 JavaScript means the programming language.
 
 
-ECMAScript is the name used by the language specification. Therefore, whenever referring to versions of the language, people say ECMAScript. The current version of JavaScript is ECMAScript 5; ECMAScript 6 is currently being developed.
+ECMAScript is the name used by the language specification. Therefore, 
+whenever referring to versions of the language, people say ECMAScript.
+The current version of JavaScript is ECMAScript 5; ECMAScript 6 is currently being developed.
 
 You can use expression as a function argument.
 myFunction(y >= 0 ? y : -y)
 
 
-Semicolons are optional in JavaScript. However, I recommend always including them, because otherwise JavaScript can guess wrong about the end of a statement. 
+Semicolons are optional in JavaScript. However, I recommend always including them,
+ because otherwise JavaScript can guess wrong about the end of a statement. 
 
 Semicolons terminate statements, but not blocks.
 But there is one case you will see a semicolons after a blocks.
 var f = function () { };  // function expr. inside var decl.
 
 
-Roughly, the first character of an identifier can be any Unicode letter, a dollar sign ($), or an underscore (_). Subsequent characters can additionally be any Unicode digit. Thus, the following are all legal identifiers:
+Roughly, the first character of an identifier can be any Unicode letter, a dollar sign ($), or an underscore (_).
+Subsequent characters can additionally be any Unicode digit. Thus, the following are all legal identifiers:
 arg0
 _tmp
 $elem
@@ -31,7 +35,8 @@ undefined
 <strong>Values</strong>
 JavaScript has many values like booleans,numbers,array etc.
 
- All values in JavaScript have properties. Each property has a key (or name) and a value. You can think of properties like fields of a record. You use the dot (.) operator to read a property: value.propKey
+ All values in JavaScript have properties. Each property has a key (or name) and a value. 
+ You can think of properties like fields of a record. You use the dot (.) operator to read a property: value.propKey
 Example:
 var str = 'abc';
 str.length
@@ -125,7 +130,8 @@ If you read a nonexistent property, you get undefined:
 undefined
 
 
-null  means “no object.” It is used as a nonvalue whenever an object is expected (parameters, last in a chain of objects, etc.).
+null  means “no object.” It is used as a nonvalue whenever an object is expected 
+(parameters, last in a chain of objects, etc.).
 
 <strong>Remarks:undefined and null have no properties, not even standard methods such as toString().
 
@@ -143,7 +149,8 @@ typeof is mainly used for primitive values,
 while instanceof is used for objects.
 example:> typeof [] // empty array literal
 'object'
-<strong>Remarks:typeof null returning 'object' is a bug that can’t be fixed, because it would break existing code. It does not mean that null is an object.</strong>
+<strong>Remarks:typeof null returning 'object' is a bug that can’t be fixed, 
+because it would break existing code. It does not mean that null is an object.</strong>
 
 
 instanceof looks like this:
@@ -179,7 +186,8 @@ true
 true
 
 <strong>Binary Logical Operators</strong>
-Binary logical operators in JavaScript are short-circuiting. That is, if the first operand suffices for determining the result, the second operand is not evaluated.
+Binary logical operators in JavaScript are short-circuiting. 
+That is, if the first operand suffices for determining the result, the second operand is not evaluated.
 false && foo()//foo() never called
 
 <strong>Always using strict equality is recommended.</strong>
@@ -202,7 +210,9 @@ Infinity
 > Math.pow(2, 1024)  <strong>// number too large</strong>
 Infinity
 
-<strong>Remarks:Infinity is larger than any other number (except NaN). Similarly, -Infinity is smaller than any other number (except NaN). That makes these numbers useful as default values (e.g., when you are looking for a minimum or a maximum).</strong>
+<strong>Remarks:Infinity is larger than any other number (except NaN). 
+Similarly, -Infinity is smaller than any other number (except NaN). 
+That makes these numbers useful as default values (e.g., when you are looking for a minimum or a maximum).</strong>
 
 
 <strong>Strings</strong>
@@ -211,7 +221,8 @@ Single characters are accessed via square brackets:
 > str[1]
 'b'
 
-Strings are <strong>concatenated</strong> via the plus (+) operator, which converts the other operand to a string if one of the operands is a string:
+Strings are <strong>concatenated</strong> via the plus (+) operator, 
+which converts the other operand to a string if one of the operands is a string:
 > var str = '';
 > str += 'Multiple ';
 > str += 'pieces ';
@@ -250,7 +261,8 @@ function foo() {
 
 <strong>The special Variable-----  arguments</strong>
 
-You can call any function in JavaScript with an arbitrary amount of arguments; the language will never complain. It will, however, make all parameters available via the special variable <strong>arguments</strong>.
+You can call any function in JavaScript with an arbitrary amount of arguments; 
+the language will never complain. It will, however, make all parameters available via the special variable <strong>arguments</strong>.
 
 <strong>arguments looks like an array, but has none of the array methods:</strong>
 
@@ -302,7 +314,9 @@ function pair(x, y) {
 
 <strong>Converting <i>arguments</i> to an Array</strong>
 arguments is not an array, it is only array-like.
- It has a property length, and you can access its elements via indices in square brackets. You cannot, however, remove elements or invoke any of the array methods on it. Thus, you sometimes need to convert arguments to an array, which is what the following function does .
+ It has a property length, and you can access its elements via indices in square brackets. 
+ You cannot, however, remove elements or invoke any of the array methods on it. 
+ Thus, you sometimes need to convert arguments to an array, which is what the following function does .
  function toArray(arrayLikeObject) {
     return Array.prototype.slice.call(arrayLikeObject);
 }by using //<strong>Array.prototype.slice.call()</strong>
@@ -330,7 +344,8 @@ function getPersons(ids) {
     });
     return result;
 }
-The try clause surrounds critical code, and the catch clause is executed if an exception is thrown inside the try clause. Using the preceding code:
+The try clause surrounds critical code, and the catch clause is executed if an exception is thrown inside the try clause.
+ Using the preceding code:
 > getPersons([2, -5, 137])
 [Error: ID must not be negative: -5]
 [ { id: 2 }, { id: 137 } ]
@@ -402,7 +417,8 @@ The function starting in line (1) leaves the context in which it was created, bu
 > inc()
 8
 
-<strong>Remarks:A closure is a function plus the connection to the variables of its surrounding scopes. Thus, what createIncrementor() returns is a closure.</strong>
+<strong>Remarks:A closure is a function plus the connection to the variables of its surrounding scopes.
+ Thus, what createIncrementor() returns is a closure.</strong>
 
 Read more about closure at
 <a href="http://stackoverflow.com/questions/111102/how-do-javascript-closures-work
@@ -415,7 +431,8 @@ Sometimes you want to introduce a new variable scope—for example, to prevent a
     var tmp = ...;  // not a global variable
 }());  // close IIFE
 
-<strong>. An IIFE is a function expression that is called immediately after you define it. Inside the function, a new scope exists, preventing tmp from becoming global. </strong>
+<strong>. An IIFE is a function expression that is called immediately after you define it. 
+Inside the function, a new scope exists, preventing tmp from becoming global. </strong>
 
 
 
@@ -428,7 +445,11 @@ for (var i=0; i < 5; i++) {
 }
 console.log(result[1]()); // 5 (not 1)
 console.log(result[3]()); // 5 (not 3)
-The value returned in line (1) is always the current value of i, not the value it had when the function was created. After the loop is finished, i has the value 5, which is why all functions in the array return that value. If you want the function in line (1) to receive a snapshot of the current value of i, you can use an IIFE:
+
+
+The value returned in line (1) is always the current value of i, not the value it had when the function was created. 
+After the loop is finished, i has the value 5, which is why all functions in the array return that value.
+If you want the function in line (1) to receive a snapshot of the current value of i, you can use an IIFE:
 for (var i=0; i < 5; i++) {
     (function () {
         var i2 = i; // copy current i
@@ -480,7 +501,9 @@ The solution is to use the method bind() that all functions have. It creates a n
 <strong>Functions Inside a Method</strong>
 
 
-Every function has its own special variable this. This is inconvenient if you nest a function inside a method, because you can’t access the method’s this from the function. The following is an example where we call forEach with a function to iterate over an array:
+Every function has its own special variable this. 
+This is inconvenient if you nest a function inside a method, because you can’t access the method’s this from the function.
+The following is an example where we call forEach with a function to iterate over an array:
 var jane = {
     name: 'Jane',
     friends: [ 'Tarzan', 'Cheeta' ],
@@ -510,7 +533,8 @@ logHiToFriends: function () {
         console.log(this.name+' says hi to '+friend);
     }, this);
 }
-Function expressions are often used as arguments in function calls in JavaScript. Always be careful when you refer to this from one of those function expressions.
+Function expressions are often used as arguments in function calls in JavaScript. 
+Always be careful when you refer to this from one of those function expressions.
 
 <strong>Constructor</strong>
 constructors—factories for objects—if invoked via the new operator. 
