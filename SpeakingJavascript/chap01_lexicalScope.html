@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var text = 'Look at me';
+		var parent_function = function () {
+			var inner_function = function () {
+	    	var scream = '!!!';
+	    	alert(text + ', ' + reason + scream);//reason of parent function
+	  	}
+	  
+		  var reason = "I'm an attention whore";
+		  var scream = '!';
+		  
+		  alert(text + scream);
+		  inner_function();
+		};
+
+		parent_function();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+
+<!-- The scope of an inner function contains the scope of a parent function. -->
