@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HandleBars</title>
+	<script src="handlebars-v2.0.0.js"></script>
+	<script src="jquery-1.11.1.js"></script>	
+	<script src="hjQuery2.js"></script>
+</head>
+<body>
+<div class="gridContainer">
+		<script id="template" type="text/x-handlebars-template">
+			{{#each this}}
+			<div class="lockedColumns">
+				<h1>{{author}}<h1>
+			</div>
+			<div class="scrollableColumns">
+				{{tweet}}
+			</div>
+			<div class="avgAnnualreturn">
+				<span class="1yrs">
+					{{avgAnnualReturn.1yr}}
+				</span>
+				<span class="2yrs">
+					{{avgAnnualReturn.2yr}}
+				</span>
+				<span class="3yrs">
+					{{avgAnnualReturn.3yr}}
+				</span>
+			</div>
+
+			{{/each}}
+		</script>
+	</div>
+	
+</body>
+</html>

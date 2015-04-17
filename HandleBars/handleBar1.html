@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HandleBars</title>
+	<script src="handlebars-v2.0.0.js"></script>
+	<script src="jquery-1.11.1.js"></script>	
+	<script src="hjQuery1.js"></script>
+</head>
+<body>
+<div class="gridContainer">
+		<script id="template" type="text/x-handlebars-template">
+			{{#each this}}
+			<div class="lockedColumns">
+				{{author}}
+			</div>
+			<div class="scrollableColumns">
+				{{tweet}}
+			</div>
+			{{/each}}
+		</script>
+	</div>
+</body>
+</html>

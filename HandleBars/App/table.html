@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Student's Report Card</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<script src="../handlebars-v2.0.0.js"></script>
+	<script src="../jquery-1.11.1.js"></script>	
+	<script src="table.js"></script>
+</head>
+<body>
+	<table >
+		<thead>
+			<th>Name</th>
+			<th>Maths</th>
+			<th>English</th>
+			<th>Hindi</th>
+			<th>Science</th>
+			<th>Total</th>
+			<th>Result</th>
+		</thead>
+
+		
+			
+		<tbody class="tableClass">
+			<script id="template" type="text/x-handlebars-template">
+			{{#each this}}
+						
+			<tr>
+				<td>{{Name}}</td>									
+				<td class="{{setColor Maths}}">{{Maths}}/{{MaximumMarks}}</td>
+				<td class="{{setColor English}}">{{English}}/{{MaximumMarks}}</td>
+				<td class="{{setColor Hindi}}">{{Hindi}}/{{MaximumMarks}}</td>
+				<td class="{{setColor Science}}">{{Science}}/{{MaximumMarks}}</td>					
+				<td>{{calculateTotal this}}</td>
+				<td>{{findResult this}}</td>	
+				
+							
+			</tr>
+			
+			{{/each}}
+			</script>
+		</tbody>
+  		
+	</table>
+	
+</body>
+</html>

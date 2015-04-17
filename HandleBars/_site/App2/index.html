@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Student's Report Card</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<script src="../handlebars-v2.0.0.js"></script>
+	<script src="../jquery-1.11.1.js"></script>	
+	<script src="jquery_app.js"></script>
+</head>
+<body>
+
+	<ul id="ulId">
+		<li></li>
+
+	</ul>
+
+	<table class="tableClass">
+		<thead>Student Record</thead>
+
+		<tr>
+			<th>Name</th>
+			<th>Maths</th>
+			<th>English</th>
+			<th>Hindi</th>
+			<th>Science</th>
+			
+		</tr>
+		<script id="template" type="text/x-handlebars-template">
+		{{#each this}}
+		<tr>
+			<td>{{Name}}</td>
+			<td>{{Maths}}</td>
+			<td>{{English}}</td>
+			<td>{{Hindi}}</td>
+			<td>{{Science}}</td>			
+		</tr>
+		{{/each}}
+		</script>
+  		
+	</table>
+	
+</body>
+</html>

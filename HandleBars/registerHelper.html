@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HandleBars</title>
+	<script src="handlebars-v2.0.0.js"></script>
+	<script src="jquery-1.11.1.js"></script>	
+	<script src="hjQuery1.js"></script>
+</head>
+<body>
+<div class="gridContainer">
+		<script id="template" type="text/x-handlebars-template">
+			<div class="entry">
+			  <h1>{{title}}</h1>
+			  {{#with story}}
+			    <div class="intro">{{{intro}}}</div>
+			    <div class="body">{{{body}}}</div>
+			  {{/with}}
+			</div>
+			<div class="comments">
+			  {{#each comments}}
+			    <div class="comment">
+			      <h2>{{subject}}</h2>
+			      {{{body}}}
+			    </div>
+			  {{/each}}
+			</div>
+		</script>
+	</div>
+</body>
+</html>
+<script>
+	Handlebars.registerHelper('each', function(context, options) {
+	  var ret = "";
+
+	  for(var i=0, j=context.length; i<j; i++) {
+	    ret = ret + options.fn(context[i]);
+	  }
+
+	  return ret;
+	});
+</script>

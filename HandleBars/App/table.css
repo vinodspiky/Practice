@@ -1,0 +1,16 @@
+table,
+th,
+td {
+  border: 1px solid #000000;
+  text-align: center;
+  border-collapse: collapse;
+}
+.failed {
+  color: #ff0000;
+}
+thead {
+  background-color: #fe9a2e;
+}
+tr:nth-child(even) {
+  background-color: #c0c0c0;
+}

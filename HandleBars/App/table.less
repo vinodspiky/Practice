@@ -1,0 +1,25 @@
+@solidBlack:#000;
+@red:red;
+@alternateColor:#C0C0C0;
+@headColor:#FE9A2E;
+
+
+
+table,th,td{
+    border: 1px solid @solidBlack;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+// .failed{
+// 	 color:@red; 
+// }
+
+thead{
+	background-color:@headColor;
+}
+
+
+tr:nth-child(even) {
+    background-color:@alternateColor;
+}

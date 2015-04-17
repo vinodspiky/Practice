@@ -1,0 +1,13 @@
+{
+
+    "p1":{"Name":"Vinod", "Math":40, "English":50,"Hindi":30,"Science":20},
+    "p2":{"Name":"Sonu", "Math":50, "English":50,"Hindi":30,"Science":20},
+    "p3":{"Name":"Anil", "Math":60, "English":50,"Hindi":30,"Science":20},
+    "p4":{"Name":"Sunil", "Math":40, "English":50,"Hindi":30,"Science":20},
+    "p5":{"Name":"Sachin", "Math":25, "English":50,"Hindi":30,"Science":20},
+    "p6":{"Name":"Saurav", "Math":90, "English":50,"Hindi":30,"Science":20},
+    "p7":{"Name":"Shivam", "Math":80, "English":50,"Hindi":30,"Science":20},
+    "p8":{"Name":"Shivam", "Math":80, "English":50,"Hindi":30,"Science":20},
+    "p9":{"Name":"Shivam", "Math":80, "English":50,"Hindi":30,"Science":20},
+}
+    
